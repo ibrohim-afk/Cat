@@ -1,0 +1,271 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 640 520" width="1280" height="1040" shape-rendering="crispEdges" font-family="monospace">
+  <!--
+    KIKO & GUA KRISTAL - Sprite Sheet Orisinal
+    Setiap elemen digambar di grid 16x16 (id di <defs>), ditampilkan 4x lebih besar.
+    Pakai di kode: <use href="#kiko"/> atau salin isi <g id="..."> ke file sendiri.
+    Palet: ungu tua #1b1033, biru malam #2a2a5a, tosca #3ddbd9, oranye #ff9a3c, krem #ffe8c2, hijau lumut #5fbf5f
+  -->
+  <defs>
+    <!-- ===== KARAKTER ===== -->
+    <g id="kiko">
+      <rect x="12" y="8" width="2" height="5" fill="#ff9a3c"/>
+      <rect x="13" y="6" width="2" height="3" fill="#ff9a3c"/>
+      <rect x="3" y="7" width="9" height="6" fill="#ff9a3c"/>
+      <rect x="5" y="10" width="5" height="3" fill="#ffe8c2"/>
+      <rect x="2" y="2" width="9" height="6" fill="#ff9a3c"/>
+      <rect x="2" y="0" width="2" height="2" fill="#ff9a3c"/>
+      <rect x="9" y="0" width="2" height="2" fill="#ff9a3c"/>
+      <rect x="3" y="1" width="1" height="1" fill="#ffb3b3"/>
+      <rect x="9" y="1" width="1" height="1" fill="#ffb3b3"/>
+      <rect x="4" y="4" width="2" height="2" fill="#5fbf5f"/>
+      <rect x="8" y="4" width="2" height="2" fill="#5fbf5f"/>
+      <rect x="5" y="4" width="1" height="2" fill="#1b1033"/>
+      <rect x="9" y="4" width="1" height="2" fill="#1b1033"/>
+      <rect x="6" y="6" width="2" height="1" fill="#ff7a8a"/>
+      <rect x="2" y="8" width="9" height="1" fill="#3d8bff"/>
+      <rect x="9" y="9" width="2" height="2" fill="#3d8bff"/>
+      <rect x="3" y="13" width="3" height="2" fill="#e07a1f"/>
+      <rect x="8" y="13" width="3" height="2" fill="#e07a1f"/>
+    </g>
+
+    <!-- ===== MUSUH ===== -->
+    <g id="slime">
+      <rect x="2" y="9" width="12" height="5" fill="#5fbf5f"/>
+      <rect x="4" y="6" width="8" height="3" fill="#5fbf5f"/>
+      <rect x="6" y="5" width="4" height="1" fill="#5fbf5f"/>
+      <rect x="2" y="13" width="12" height="1" fill="#3f8f3f"/>
+      <rect x="5" y="7" width="2" height="2" fill="#ffffff"/>
+      <rect x="9" y="7" width="2" height="2" fill="#ffffff"/>
+      <rect x="6" y="8" width="1" height="1" fill="#1b1033"/>
+      <rect x="10" y="8" width="1" height="1" fill="#1b1033"/>
+      <rect x="4" y="11" width="2" height="1" fill="#8fe08f"/>
+    </g>
+    <g id="bat">
+      <rect x="6" y="5" width="4" height="5" fill="#9b5de5"/>
+      <rect x="6" y="3" width="1" height="2" fill="#9b5de5"/>
+      <rect x="9" y="3" width="1" height="2" fill="#9b5de5"/>
+      <polygon points="6,6 0,3 2,8 3,11 6,10" fill="#6a35b5"/>
+      <polygon points="10,6 16,3 14,8 13,11 10,10" fill="#6a35b5"/>
+      <rect x="7" y="6" width="1" height="1" fill="#3ddbd9"/>
+      <rect x="9" y="6" width="1" height="1" fill="#3ddbd9"/>
+      <rect x="7" y="9" width="1" height="1" fill="#ffffff"/>
+      <rect x="9" y="9" width="1" height="1" fill="#ffffff"/>
+    </g>
+    <g id="golem">
+      <rect x="3" y="3" width="10" height="11" fill="#8a8a99"/>
+      <rect x="1" y="6" width="2" height="6" fill="#6a6a7a"/>
+      <rect x="13" y="6" width="2" height="6" fill="#6a6a7a"/>
+      <rect x="3" y="12" width="10" height="2" fill="#5a5a6a"/>
+      <rect x="5" y="1" width="6" height="2" fill="#8a8a99"/>
+      <rect x="5" y="5" width="2" height="2" fill="#ff9a3c"/>
+      <rect x="9" y="5" width="2" height="2" fill="#ff9a3c"/>
+      <rect x="6" y="9" width="4" height="1" fill="#3a3a4a"/>
+      <rect x="4" y="4" width="1" height="1" fill="#b3b3c4"/>
+      <rect x="10" y="10" width="2" height="1" fill="#5a5a6a"/>
+    </g>
+    <g id="spider">
+      <rect x="8" y="0" width="1" height="6" fill="#d9d9ef"/>
+      <rect x="5" y="6" width="7" height="5" fill="#3a2f55"/>
+      <rect x="6" y="5" width="5" height="1" fill="#3a2f55"/>
+      <rect x="6" y="7" width="2" height="2" fill="#ff5a5a"/>
+      <rect x="9" y="7" width="2" height="2" fill="#ff5a5a"/>
+      <rect x="2" y="6" width="3" height="1" fill="#3a2f55"/>
+      <rect x="1" y="7" width="1" height="3" fill="#3a2f55"/>
+      <rect x="2" y="10" width="3" height="1" fill="#3a2f55"/>
+      <rect x="12" y="6" width="3" height="1" fill="#3a2f55"/>
+      <rect x="15" y="7" width="1" height="3" fill="#3a2f55"/>
+      <rect x="12" y="10" width="3" height="1" fill="#3a2f55"/>
+    </g>
+
+    <!-- ===== TILE / BLOK ===== -->
+    <g id="ground">
+      <rect width="16" height="16" fill="#6b4a3a"/>
+      <rect width="16" height="4" fill="#2fb8b5"/>
+      <rect y="4" width="16" height="1" fill="#1d7f7d"/>
+      <rect x="2" y="1" width="2" height="1" fill="#3ddbd9"/>
+      <rect x="9" y="2" width="3" height="1" fill="#3ddbd9"/>
+      <rect x="3" y="8" width="3" height="2" fill="#4f3428"/>
+      <rect x="10" y="11" width="3" height="2" fill="#4f3428"/>
+      <rect x="7" y="6" width="1" height="1" fill="#8a6350"/>
+      <rect x="1" y="13" width="2" height="1" fill="#8a6350"/>
+    </g>
+    <g id="platform">
+      <rect y="0" width="16" height="4" fill="#8a6350"/>
+      <rect y="0" width="16" height="1" fill="#3ddbd9"/>
+      <rect y="3" width="16" height="1" fill="#4f3428"/>
+      <rect x="3" y="1" width="1" height="2" fill="#6b4a3a"/>
+      <rect x="11" y="1" width="1" height="2" fill="#6b4a3a"/>
+    </g>
+    <g id="crumble">
+      <rect width="16" height="16" fill="#7a6bd6"/>
+      <rect x="1" y="1" width="14" height="14" fill="#8f82e8"/>
+      <polyline points="8,1 6,6 9,9 7,15" fill="none" stroke="#2a2a5a" stroke-width="1"/>
+      <polyline points="9,9 13,11" fill="none" stroke="#2a2a5a" stroke-width="1"/>
+      <rect x="3" y="3" width="2" height="1" fill="#c9c2ff"/>
+    </g>
+    <g id="chest">
+      <rect width="16" height="16" fill="#c8862e"/>
+      <rect x="1" y="1" width="14" height="14" fill="#e0a040"/>
+      <rect y="7" width="16" height="1" fill="#8a5a1a"/>
+      <polygon points="8,4 11,7 8,12 5,7" fill="#3ddbd9"/>
+      <polygon points="8,4 11,7 8,7" fill="#a6f5f4"/>
+    </g>
+    <g id="spring">
+      <rect y="13" width="16" height="3" fill="#6b4a3a"/>
+      <rect x="2" y="11" width="12" height="2" fill="#5fbf5f"/>
+      <polyline points="4,11 12,9 4,7 12,5" fill="none" stroke="#3f8f3f" stroke-width="1.5"/>
+      <rect x="3" y="3" width="10" height="2" fill="#8fe08f"/>
+      <rect x="5" y="2" width="2" height="1" fill="#ffe8c2"/>
+    </g>
+
+    <!-- ===== RINTANGAN ===== -->
+    <g id="spikes">
+      <rect y="13" width="16" height="3" fill="#2a2a5a"/>
+      <polygon points="0,13 2,3 4,13" fill="#3ddbd9"/>
+      <polygon points="4,13 6,5 8,13" fill="#7ff0ee"/>
+      <polygon points="8,13 10,3 12,13" fill="#3ddbd9"/>
+      <polygon points="12,13 14,5 16,13" fill="#7ff0ee"/>
+    </g>
+    <g id="acid">
+      <rect y="4" width="16" height="12" fill="#9be15d"/>
+      <rect y="4" width="16" height="2" fill="#c8ff8a"/>
+      <rect x="2" y="9" width="3" height="1" fill="#74b83a"/>
+      <rect x="9" y="12" width="4" height="1" fill="#74b83a"/>
+      <rect x="11" y="7" width="2" height="2" fill="#e6ffc0"/>
+    </g>
+    <g id="falling-rock">
+      <polygon points="3,1 13,1 15,9 10,15 4,14 1,8" fill="#7a7a8a"/>
+      <polygon points="3,1 13,1 10,6 5,6" fill="#9a9aab"/>
+      <rect x="6" y="9" width="3" height="1" fill="#4a4a5a"/>
+      <rect x="9" y="6" width="1" height="3" fill="#4a4a5a"/>
+    </g>
+
+    <!-- ===== ITEM ===== -->
+    <g id="gem-blue">
+      <polygon points="8,1 14,6 8,15 2,6" fill="#3d8bff"/>
+      <polygon points="8,1 14,6 8,6" fill="#8fc0ff"/>
+      <polygon points="2,6 8,6 8,15" fill="#2a63c0"/>
+    </g>
+    <g id="gem-green">
+      <polygon points="8,1 14,6 8,15 2,6" fill="#3ddb7a"/>
+      <polygon points="8,1 14,6 8,6" fill="#9bf5bf"/>
+      <polygon points="2,6 8,6 8,15" fill="#22a055"/>
+    </g>
+    <g id="gem-red">
+      <polygon points="8,1 14,6 8,15 2,6" fill="#ff4d6d"/>
+      <polygon points="8,1 14,6 8,6" fill="#ffa3b3"/>
+      <polygon points="2,6 8,6 8,15" fill="#b8243f"/>
+    </g>
+    <g id="goldfish">
+      <ellipse cx="7" cy="8" rx="5" ry="3.5" fill="#ffb03c"/>
+      <polygon points="11,8 15,4 15,12" fill="#ff9a3c"/>
+      <rect x="3" y="7" width="2" height="2" fill="#ffffff"/>
+      <rect x="3" y="7" width="1" height="1" fill="#1b1033"/>
+      <rect x="6" y="5" width="1" height="6" fill="#ffd27a"/>
+    </g>
+    <g id="lantern">
+      <rect x="7" y="0" width="2" height="2" fill="#8a8a99"/>
+      <rect x="4" y="2" width="8" height="2" fill="#8a8a99"/>
+      <rect x="4" y="4" width="8" height="8" fill="#ffd84d"/>
+      <rect x="6" y="6" width="4" height="4" fill="#fff6b0"/>
+      <rect x="4" y="12" width="8" height="2" fill="#8a8a99"/>
+      <rect x="4" y="4" width="1" height="8" fill="#e0b020"/>
+    </g>
+    <g id="star-feather">
+      <polygon points="8,1 10,6 15,6 11,9 13,15 8,11 3,15 5,9 1,6 6,6" fill="#ffd84d"/>
+      <polygon points="8,1 10,6 8,8 6,6" fill="#fff6b0"/>
+      <rect x="7" y="7" width="2" height="2" fill="#ff9a3c"/>
+    </g>
+    <g id="key">
+      <rect x="1" y="5" width="6" height="6" fill="#3ddbd9"/>
+      <rect x="3" y="7" width="2" height="2" fill="#1b1033"/>
+      <rect x="7" y="7" width="8" height="2" fill="#3ddbd9"/>
+      <rect x="12" y="9" width="2" height="3" fill="#3ddbd9"/>
+      <rect x="1" y="5" width="6" height="1" fill="#a6f5f4"/>
+    </g>
+    <g id="gate">
+      <rect x="1" y="0" width="14" height="16" fill="#2a2a5a"/>
+      <rect x="3" y="2" width="10" height="14" fill="#1b1033"/>
+      <rect x="3" y="2" width="1" height="14" fill="#3ddbd9"/>
+      <rect x="12" y="2" width="1" height="14" fill="#3ddbd9"/>
+      <rect x="3" y="2" width="10" height="1" fill="#3ddbd9"/>
+      <rect x="7" y="2" width="2" height="14" fill="#3ddbd9"/>
+      <polygon points="8,5 10,8 8,11 6,8" fill="#ff9a3c"/>
+    </g>
+    <g id="checkpoint">
+      <rect x="3" y="1" width="1" height="15" fill="#d9d9ef"/>
+      <polygon points="4,2 14,5 4,9" fill="#3ddbd9"/>
+      <polygon points="4,2 14,5 4,5" fill="#a6f5f4"/>
+    </g>
+  </defs>
+
+  <!-- ===== LEMBAR TAMPILAN ===== -->
+  <rect width="640" height="520" fill="#1b1033"/>
+  <g fill="#3ddbd9" font-size="11">
+    <text x="16" y="18">KARAKTER &amp; MUSUH</text>
+    <text x="16" y="138">TILE / BLOK &amp; RINTANGAN</text>
+    <text x="16" y="258">ITEM</text>
+    <text x="16" y="378">ATMOSFER (CONTOH PARALLAX)</text>
+  </g>
+  <g fill="#ffe8c2" font-size="9" text-anchor="middle">
+    <!-- baris 1 -->
+    <g transform="translate(16,26) scale(4)"><use href="#kiko"/></g><text x="48" y="104">kiko</text>
+    <g transform="translate(112,26) scale(4)"><use href="#slime"/></g><text x="144" y="104">slime</text>
+    <g transform="translate(208,26) scale(4)"><use href="#bat"/></g><text x="240" y="104">bat</text>
+    <g transform="translate(304,26) scale(4)"><use href="#golem"/></g><text x="336" y="104">golem</text>
+    <g transform="translate(400,26) scale(4)"><use href="#spider"/></g><text x="432" y="104">spider</text>
+
+    <!-- baris 2 -->
+    <g transform="translate(16,146) scale(4)"><use href="#ground"/></g><text x="48" y="224">ground</text>
+    <g transform="translate(112,146) scale(4)"><use href="#platform"/></g><text x="144" y="224">platform</text>
+    <g transform="translate(208,146) scale(4)"><use href="#crumble"/></g><text x="240" y="224">crumble</text>
+    <g transform="translate(304,146) scale(4)"><use href="#chest"/></g><text x="336" y="224">chest</text>
+    <g transform="translate(400,146) scale(4)"><use href="#spring"/></g><text x="432" y="224">spring</text>
+    <g transform="translate(496,146) scale(4)"><use href="#spikes"/></g><text x="528" y="224">spikes</text>
+    <g transform="translate(560,146) scale(4)"><use href="#acid"/></g><text x="592" y="224">acid</text>
+
+    <!-- baris 3 -->
+    <g transform="translate(16,266) scale(4)"><use href="#gem-blue"/></g><text x="48" y="344">gem-blue</text>
+    <g transform="translate(88,266) scale(4)"><use href="#gem-green"/></g><text x="120" y="344">gem-green</text>
+    <g transform="translate(160,266) scale(4)"><use href="#gem-red"/></g><text x="192" y="344">gem-red</text>
+    <g transform="translate(232,266) scale(4)"><use href="#goldfish"/></g><text x="264" y="344">goldfish</text>
+    <g transform="translate(304,266) scale(4)"><use href="#lantern"/></g><text x="336" y="344">lantern</text>
+    <g transform="translate(376,266) scale(4)"><use href="#star-feather"/></g><text x="408" y="344">star-feather</text>
+    <g transform="translate(448,266) scale(4)"><use href="#key"/></g><text x="480" y="344">key</text>
+    <g transform="translate(520,266) scale(4)"><use href="#gate"/></g><text x="552" y="344">gate</text>
+    <g transform="translate(584,266) scale(3)"><use href="#checkpoint"/></g><text x="608" y="320">flag</text>
+    <g transform="translate(496,146) scale(0)"/>
+    <g transform="translate(560,210) scale(0)"/>
+  </g>
+
+  <!-- batu jatuh (dipindah ke baris 2 kanan bawah) -->
+  <g transform="translate(560,226) scale(2)"><use href="#falling-rock"/></g>
+  <text x="592" y="262" fill="#ffe8c2" font-size="9" text-anchor="middle">rock</text>
+
+  <!-- ===== CONTOH PARALLAX 3 LAPIS ===== -->
+  <rect x="16" y="386" width="608" height="118" fill="#2a2a5a"/>
+  <!-- lapis jauh: dinding gelap -->
+  <polygon points="16,504 16,440 90,420 170,450 260,415 350,445 440,418 530,448 624,425 624,504" fill="#1b1033"/>
+  <!-- lapis tengah: stalaktit -->
+  <g fill="#3a3a7a">
+    <polygon points="40,386 60,386 50,430"/><polygon points="120,386 150,386 135,445"/>
+    <polygon points="230,386 250,386 240,425"/><polygon points="330,386 365,386 347,450"/>
+    <polygon points="450,386 470,386 460,428"/><polygon points="540,386 575,386 557,442"/>
+  </g>
+  <!-- lapis dekat: kristal bercahaya -->
+  <g>
+    <polygon points="70,504 80,470 90,504" fill="#3ddbd9" opacity="0.9"/>
+    <polygon points="85,504 97,455 109,504" fill="#7ff0ee" opacity="0.9"/>
+    <polygon points="300,504 312,468 324,504" fill="#9b5de5" opacity="0.9"/>
+    <polygon points="318,504 328,480 338,504" fill="#c9a6ff" opacity="0.9"/>
+    <polygon points="520,504 533,462 546,504" fill="#3ddbd9" opacity="0.9"/>
+  </g>
+  <!-- lingkaran cahaya sekitar Kiko -->
+  <defs>
+    <radialGradient id="glow"><stop offset="0" stop-color="#ffe8c2" stop-opacity="0.45"/><stop offset="1" stop-color="#ffe8c2" stop-opacity="0"/></radialGradient>
+  </defs>
+  <circle cx="400" cy="470" r="60" fill="url(#glow)"/>
+  <g transform="translate(384,462) scale(1.5)"><use href="#kiko"/></g>
+  <rect x="16" y="494" width="608" height="10" fill="#6b4a3a"/>
+  <rect x="16" y="494" width="608" height="3" fill="#2fb8b5"/>
+</svg>

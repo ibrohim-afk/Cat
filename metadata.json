@@ -1,0 +1,6 @@
+{
+  "name": "Kiko & Gua Kristal",
+  "description": "Game platformer 2D side-scrolling pixel art petualangan kucing Kiko menjelajahi gua kristal mistis.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

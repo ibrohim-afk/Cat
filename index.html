@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Kiko & Gua Kristal</title>
+    <meta name="description" content="Game platformer 2D side-scrolling pixel art petualangan kucing Kiko menjelajahi gua kristal mistis." />
+    <meta property="og:title" content="Kiko & Gua Kristal" />
+    <meta property="og:description" content="Game platformer 2D side-scrolling pixel art petualangan kucing Kiko menjelajahi gua kristal mistis." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body data-state="title">
+    <div id="game-container">
+      <!-- 2D Pixel Canvas -->
+      <canvas id="game-canvas" width="384" height="216"></canvas>
+
+      <!-- HUD (Live Game Stats) -->
+      <div id="hud" class="hidden">
+        <div class="hud-left">
+          <div class="hud-row">
+            <div id="hud-hearts" aria-label="Nyawa Kiko">
+              <span class="heart-pip heart-full"><svg width="18" height="18" viewBox="0 0 24 24" fill="#ff4d6d"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></span>
+              <span class="heart-pip heart-full"><svg width="18" height="18" viewBox="0 0 24 24" fill="#ff4d6d"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></span>
+              <span class="heart-pip heart-full"><svg width="18" height="18" viewBox="0 0 24 24" fill="#ff4d6d"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></span>
+            </div>
+            <div class="hud-score-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#3ddbd9"><polygon points="12,2 22,9 12,22 2,9"/></svg>
+              <span id="hud-gems">0</span>
+            </div>
+          </div>
+          <div class="hud-dash-meter">
+            <span>DASH</span>
+            <div class="dash-meter-bar">
+              <div id="hud-dash-fill"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hud-center">
+          <div id="hud-level">Lv.1 Gua Lumut</div>
+          <div id="hud-timer">00:00</div>
+        </div>
+
+        <div class="hud-right">
+          <div id="hud-buffs"></div>
+          <button id="btn-hud-pause" class="btn-icon" aria-label="Pause Game" tabindex="-1">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <rect x="6" y="4" width="4" height="16" />
+              <rect x="14" y="4" width="4" height="16" />
+            </svg>
+          </button>
+          <button id="btn-mute" class="btn-icon" aria-label="Toggle Sound" tabindex="-1">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M11 5L6 9H2v6h4l5 4V5z"/>
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- TITLE SCREEN -->
+      <div id="title-screen" class="overlay-screen">
+        <div class="title-box">
+          <div class="title-logo">
+            <h1>KIKO &amp; GUA KRISTAL</h1>
+            <h2>Petualangan Kucing Oranye Menembus Gua Kristal Mistis</h2>
+          </div>
+
+          <div class="title-emblem-wrap">
+            <svg class="kiko-title-avatar" viewBox="0 0 16 16" width="64" height="64" shape-rendering="crispEdges">
+              <!-- Kiko pixel icon -->
+              <rect x="12" y="8" width="2" height="5" fill="#ff9a3c"/>
+              <rect x="13" y="6" width="2" height="3" fill="#ff9a3c"/>
+              <rect x="3" y="7" width="9" height="6" fill="#ff9a3c"/>
+              <rect x="5" y="10" width="5" height="3" fill="#ffe8c2"/>
+              <rect x="2" y="2" width="9" height="6" fill="#ff9a3c"/>
+              <rect x="2" y="0" width="2" height="2" fill="#ff9a3c"/>
+              <rect x="9" y="0" width="2" height="2" fill="#ff9a3c"/>
+              <rect x="3" y="1" width="1" height="1" fill="#ffb3b3"/>
+              <rect x="9" y="1" width="1" height="1" fill="#ffb3b3"/>
+              <rect x="4" y="4" width="2" height="2" fill="#5fbf5f"/>
+              <rect x="8" y="4" width="2" height="2" fill="#5fbf5f"/>
+              <rect x="5" y="4" width="1" height="2" fill="#1b1033"/>
+              <rect x="9" y="4" width="1" height="2" fill="#1b1033"/>
+              <rect x="6" y="6" width="2" height="1" fill="#ff7a8a"/>
+              <rect x="2" y="8" width="9" height="1" fill="#3d8bff"/>
+              <rect x="9" y="9" width="2" height="2" fill="#3d8bff"/>
+              <rect x="3" y="13" width="3" height="2" fill="#e07a1f"/>
+              <rect x="8" y="13" width="3" height="2" fill="#e07a1f"/>
+            </svg>
+          </div>
+
+          <button id="btn-start-game" class="btn-pixel-primary" data-start="true">
+            MULAI PETUALANGAN [Enter]
+          </button>
+
+          <div class="title-stats">
+            Skor Tertinggi: <span id="title-high-score">0</span>
+          </div>
+
+          <div class="controls-hint-bar">
+            <strong>KONTROL:</strong> Panah / WASD (Gerak) · Spasi (Lompat / Double Jump) · Shift (Cakar Dash) · P (Pause) · M (Mute)
+          </div>
+        </div>
+      </div>
+
+      <!-- PAUSE MODAL -->
+      <div id="pause-modal" class="overlay-screen hidden">
+        <div class="modal-card">
+          <div class="modal-title">PERMAINAN DIJEDA</div>
+          <p style="font-size: 12px; color: #a0a0c0;">Istirahat sejenak di ceruk gua...</p>
+          <div class="modal-actions" style="flex-direction: column; width: 100%;">
+            <button id="btn-resume" class="btn-pixel-primary" style="width: 100%;">LANJUTKAN [P]</button>
+            <button id="btn-restart-pause" class="btn-pixel-secondary" style="width: 100%;">ULANG LEVEL</button>
+            <button id="btn-title-pause" class="btn-pixel-secondary" style="width: 100%;">MENU UTAMA</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- STAGE CLEAR MODAL -->
+      <div id="stage-clear-modal" class="overlay-screen hidden">
+        <div class="modal-card">
+          <div id="stage-title" class="modal-title">Gua Lumut Selesai!</div>
+          <div id="stage-stars" class="stars-rating">
+            <span class="star-icon star-gold">★</span>
+            <span class="star-icon star-gold">★</span>
+            <span class="star-icon star-dim">★</span>
+          </div>
+          <div class="modal-stats-grid">
+            <div class="stat-tile">
+              <span class="stat-label">Waktu</span>
+              <span id="stage-time" class="stat-value">00:00</span>
+            </div>
+            <div class="stat-tile">
+              <span class="stat-label">Permata</span>
+              <span id="stage-gems" class="stat-value">100%</span>
+            </div>
+            <div class="stat-tile">
+              <span class="stat-label">Total Skor</span>
+              <span id="stage-score" class="stat-value">0</span>
+            </div>
+            <div class="stat-tile">
+              <span class="stat-label">Bonus</span>
+              <span id="stage-bonus" class="stat-value">+0</span>
+            </div>
+          </div>
+          <button id="btn-next-level" class="btn-pixel-primary" data-start="true" style="width: 100%;">
+            LEVEL BERIKUTNYA ▶
+          </button>
+        </div>
+      </div>
+
+      <!-- GAME OVER MODAL -->
+      <div id="game-over-modal" class="overlay-screen hidden">
+        <div class="modal-card">
+          <div class="modal-title" style="color: #ff4d6d;">KIKO KELELAHAN...</div>
+          <p style="font-size: 12px; color: #ffa3b3;">Gua kristal terlalu ganas kali ini!</p>
+          <div class="modal-stats-grid">
+            <div class="stat-tile">
+              <span class="stat-label">Di Level</span>
+              <span id="gameover-level" class="stat-value">Level 1</span>
+            </div>
+            <div class="stat-tile">
+              <span class="stat-label">Skor</span>
+              <span id="gameover-score" class="stat-value">0</span>
+            </div>
+          </div>
+          <div class="modal-actions" style="flex-direction: column; width: 100%;">
+            <button id="btn-retry-checkpoint" class="btn-pixel-primary" data-start="true" style="width: 100%;">
+              COBA LAGI [Spasi]
+            </button>
+            <button id="btn-title-gameover" class="btn-pixel-secondary" style="width: 100%;">
+              MENU UTAMA
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- VICTORY MODAL (All levels completed!) -->
+      <div id="victory-modal" class="overlay-screen hidden">
+        <div class="modal-card">
+          <div class="modal-title" style="color: #ffd84d;">🎉 SELAMAT! 🎉</div>
+          <p style="font-size: 13px; color: #ffe8c2; line-height: 1.5;">
+            Kiko berhasil menaklukkan seluruh rahasia Gua Kristal dan kembali ke permukaan dengan selamat!
+          </p>
+          <div class="modal-stats-grid">
+            <div class="stat-tile">
+              <span class="stat-label">Total Skor Akhir</span>
+              <span id="victory-score" class="stat-value">0</span>
+            </div>
+            <div class="stat-tile">
+              <span class="stat-label">Total Waktu</span>
+              <span id="victory-time" class="stat-value">00:00</span>
+            </div>
+            <div class="stat-tile" style="grid-column: span 2;">
+              <span class="stat-label">Skor Tertinggi Anda</span>
+              <span id="victory-high" class="stat-value" style="color: #ffd84d;">0</span>
+            </div>
+          </div>
+          <button id="btn-play-again" class="btn-pixel-primary" data-start="true" style="width: 100%;">
+            MAIN LAGI 🔄
+          </button>
+        </div>
+      </div>
+
+      <!-- TOUCH CONTROLS (Mobile / Tablet) -->
+      <div id="touch-controls">
+        <div class="touch-cluster">
+          <button id="touch-left" class="touch-btn" aria-label="Gerak Kiri">◀</button>
+          <button id="touch-right" class="touch-btn" aria-label="Gerak Kanan">▶</button>
+        </div>
+        <div class="touch-cluster">
+          <button id="touch-dash" class="touch-btn touch-btn-action" aria-label="Cakar Dash">DASH</button>
+          <button id="touch-jump" class="touch-btn touch-btn-action" aria-label="Lompat">LOMPAT</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Game Script -->
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
